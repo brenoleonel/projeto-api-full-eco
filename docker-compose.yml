@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: projeto-api-all
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: admin314139
+      POSTGRES_USER: admin
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
